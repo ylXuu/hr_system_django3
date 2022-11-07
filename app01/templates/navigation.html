@@ -1,0 +1,98 @@
+
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#" style="margin-left: 20px;">人力资源管理系统</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+        {% if cur == 0 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}">主页</a>
+          </li>
+        {% endif %}
+        {% if cur != 0 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">主页</a>
+          </li>
+        {% endif %}
+        {% if cur == 1 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'worker' %}">员工管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 1 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'worker' %}">员工管理</a>
+          </li>
+        {% endif %}
+        {% if cur == 2 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'department' %}">部门管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 2 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'department' %}">部门管理</a>
+          </li>
+        {% endif %}
+        {% if cur == 3 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'training' %}">培训管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 3 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'training' %}">培训管理</a>
+          </li>
+        {% endif %}
+        {% if cur == 4 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'recruitment' %}">招聘管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 4 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'recruitment' %}">招聘管理</a>
+          </li>
+        {% endif %}
+        {% if cur == 5 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'salary' %}">薪资管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 5 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'salary' %}">薪资管理</a>
+          </li>
+        {% endif %}
+        {% if cur == 6 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'reward' %}">奖惩管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 6 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'reward' %}">奖惩管理</a>
+          </li>
+        {% endif %}
+        {% if cur == 7 %}
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'account' %}">账号管理</a>
+          </li>
+        {% endif %}
+        {% if cur != 7 %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'account' %}">账号管理</a>
+          </li>
+        {% endif %}
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">退出登录</a>
+          </li>
+
+        </ul>
+    </div>
+
+</nav>
